@@ -1,69 +1,65 @@
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { projects } from "@/content/projects";
+import { siteConfig } from "@/lib/site";
+
+const services = [
+  { number: "01", title: "Custom web applications", description: "Turn manual processes and scattered data into focused tools your team can rely on." },
+  { number: "02", title: "Business websites", description: "A clear, responsive digital presence that helps the right people understand and trust your business." },
+  { number: "03", title: "Backend & APIs", description: "Well-structured APIs and business logic for products, integrations, and frontend teams." },
+  { number: "04", title: "Existing systems", description: "Improve, extend, and maintain software that already matters to your operation." },
+];
+
+const process = [
+  ["01", "Discovery", "Understand the business, users, and outcome that matters."],
+  ["02", "Planning", "Shape a practical scope, milestones, and technical direction."],
+  ["03", "Development", "Build in focused iterations with regular, visible progress."],
+  ["04", "Launch & support", "Ship carefully, then keep improving what we built together."],
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+
+      <section className="hero section-shell" id="top">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="eyebrow-dot" /> Independent software development studio</p>
+          <h1>Reliable software for <em>real</em> business needs.</h1>
+          <p className="hero-intro">NasLabs helps businesses, startups, and organizations build practical web applications, websites, APIs, and digital systems.</p>
+          <div className="hero-actions"><Button asChild className="button button-accent"><a href="#contact" data-analytics-event="start_conversation" data-analytics-category="cta">Start a conversation <ArrowUpRight aria-hidden="true" /></a></Button><a className="text-link" href="#services" data-analytics-event="explore_services" data-analytics-category="navigation">Explore services <ArrowDown aria-hidden="true" /></a></div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-card" aria-label="NasLabs studio note">
+          <div className="card-topline"><span>NASLABS / NOTE 01</span><span>2026</span></div>
+          <div className="studio-note">
+            <p>Good software begins with a clear understanding of the work it needs to support.</p>
+            <span className="note-rule" />
+            <p className="note-caption">A small, focused studio for useful digital products.</p>
+          </div>
+          <div className="hero-card-footer"><strong>Independent by design.</strong><span>Based in Indonesia · working globally</span></div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="trust-strip" aria-label="NasLabs principles"><div className="section-shell trust-inner"><span>Working with businesses, startups, and teams</span><span>Web applications · websites · APIs</span></div></section>
+
+      <section className="section-shell home-work section-block"><div className="section-heading"><p className="eyebrow">Selected work</p><h2>A little context<br /><em>goes a long way.</em></h2></div><div className="home-work-grid">{projects.map((project) => <Link href={`/work/${project.slug}`} key={project.slug}><Card className="work-card">{project.image && <Image className="work-card-image" src={project.image} alt={`${project.title} website screenshot`} width={1200} height={630} />}<CardHeader><span className="work-index">{project.category}</span><CardTitle>{project.title}</CardTitle></CardHeader><CardContent><p>{project.summary}</p><span className="text-link">Read case study <ArrowUpRight aria-hidden="true" /></span></CardContent></Card></Link>)}</div></section>
+
+      <section className="section-shell section-block" id="services">
+        <div className="section-heading"><p className="eyebrow">What we build</p><h2>Software that makes<br /><em>work clearer.</em></h2><p>Technology is a means to a useful outcome. We keep the scope grounded in your business and the implementation ready for change.</p></div>
+        <div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><span className="service-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><span className="service-arrow" aria-hidden="true">↗</span></article>)}</div>
+      </section>
+
+      <section className="dark-panel" id="process"><div className="section-shell process-layout"><div className="section-heading light-heading"><p className="eyebrow">How we work</p><h2>Small steps.<br /><em>Strong foundations.</em></h2><p>A transparent process keeps decisions useful, progress visible, and delivery aligned with the original need.</p></div><div className="process-list">{process.map(([number, title, description]) => <div className="process-item" key={number}><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div></div>)}</div></div></section>
+
+      <section className="section-shell section-block about-layout" id="about"><div className="about-badge"><span>NL</span><small>FOUNDED<br />BY KINAS</small></div><div className="section-heading"><p className="eyebrow">A founder-led studio</p><h2>Engineering ideas into <em>digital products.</em></h2><p>NasLabs is founded and led by Rifki Anashirul (Kinas). It is a focused space for building reliable solutions, exploring better ways to work, and growing through real delivery.</p><a className="text-link" href="#contact">Get to know NasLabs <ArrowUpRight aria-hidden="true" /></a></div></section>
+
+      <section className="section-shell tech-section"><p className="eyebrow">The toolkit</p><div className="tech-row"><span>Laravel</span><span>Next.js</span><span>TypeScript</span><span>PHP</span><span>PostgreSQL</span><span>Cloudflare</span></div></section>
+
+      <section className="section-shell contact-panel" id="contact"><div><p className="eyebrow">Have a project in mind?</p><h2>Let&apos;s make it<br /><em>work.</em></h2></div><div className="contact-copy"><p>Tell us what you are trying to solve. We&apos;ll start with the problem, then find the right shape for the solution.</p><Button asChild className="button button-dark"><a href={`mailto:${siteConfig.contactEmail}`}>Start a conversation <ArrowUpRight aria-hidden="true" /></a></Button></div></section>
+
+    </main>
   );
 }
