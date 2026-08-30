@@ -26,6 +26,21 @@ export const projects: Project[] = [
       { title: "The experience", body: "The homepage leads with a clear invitation to join the movement, supported by campaign cards, impact areas, partner information, and an interactive program map. The structure is designed to make discovery and participation feel approachable." },
     ],
   },
+  {
+    slug: "cloud",
+    title: "Cloud",
+    category: "Internal platform · File management",
+    summary: "A private cloud storage module that helps teams organize, access, and manage files securely from the browser.",
+    context: "An internal storage platform for NasLabs, built as an extension of an existing Laravel system with shared authentication and user management.",
+    role: "Product implementation, frontend engineering, API integration, and storage workflow development.",
+    stack: ["Next.js", "React", "TypeScript", "shadcn/ui", "Laravel", "PostgreSQL", "REST API"],
+    image: "/projects/cloud.png",
+    sections: [
+      { title: "The challenge", body: "Teams need a dependable place for working files, but shared folders and ad-hoc storage quickly make ownership, access, and storage usage difficult to manage. The platform needed to feel familiar while respecting the security requirements of an internal system." },
+      { title: "The platform", body: "Cloud provides a focused drive experience for uploading and downloading files, creating nested folders, searching by name, and moving items through a clear browser-based workspace. A trash flow supports restore and permanent deletion without making everyday file management feel heavy." },
+      { title: "The system", body: "The module extends an existing Laravel application instead of introducing a separate identity system. Session-based authentication, user-owned storage, configurable quotas, protected file access, and activity logs keep the experience connected to the organization’s existing operational foundation." },
+    ],
+  },
 ];
 
 export function getProject(slug: string) {
