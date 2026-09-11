@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 
 export const metadata: Metadata = { title: "Services", description: "Practical software development services from NasLabs.", alternates: { canonical: "/services" } };

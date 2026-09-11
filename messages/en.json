@@ -1,0 +1,19 @@
+{
+  "Navigation": {
+    "services": "Services",
+    "work": "Work",
+    "about": "About",
+    "startProject": "Start a project",
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Bahasa Indonesia"
+  },
+  "Footer": {
+    "description": "Independent software development studio.\nBuild. Experiment. Ship.",
+    "explore": "Explore",
+    "conversation": "Start a conversation",
+    "tellUs": "Tell us about your project",
+    "backToTop": "Back to top ↑",
+    "location": "Based in Indonesia · working globally"
+  }
+}

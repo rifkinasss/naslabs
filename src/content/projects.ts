@@ -7,38 +7,115 @@ export type Project = {
   role: string;
   stack: string[];
   image?: string;
+  access: {
+    visibility: "public" | "private";
+    url?: string;
+  };
   sections: Array<{ title: string; body: string }>;
 };
 
 export const projects: Project[] = [
   {
+    slug: "pondflow",
+    title: "PondFlow",
+    category: "Web app · Aquaculture operations",
+    summary:
+      "A practical platform for fish farmers to track pond cycles, costs, and harvest performance.",
+    context:
+      "A self-hosted financial and operations platform for fish farming businesses that need clearer records across ponds, cycles, and day-to-day decisions.",
+    role: "Product design, full-stack development, data modeling, and mobile application implementation.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "SQLite",
+      "Google Gemini",
+      "Capacitor",
+      "REST API",
+    ],
+    image: "/projects/pondflow-hero.png",
+    access: { visibility: "public", url: "https://pondflow.naslabs.my.id" },
+    sections: [
+      {
+        title: "The challenge",
+        body: "Fish farming operations generate important numbers every day, but those numbers are often spread across notes, spreadsheets, and memory. PondFlow needed to make recording costs and pond activity simple enough for the field while keeping the resulting business picture clear.",
+      },
+      {
+        title: "The platform",
+        body: "PondFlow brings pond management, financial records, production cycles, and harvest analysis into one workspace. Structured entries turn daily activity into useful metrics such as cost of goods, margin, FCR, and performance trends.",
+      },
+      {
+        title: "The experience",
+        body: "The responsive web app is designed for practical use across desktop and mobile, with PWA and Android support. A focused dashboard gives operators a quick view of active ponds, current cycles, business performance, and the next decision to make.",
+      },
+    ],
+  },
+  {
     slug: "tanamin-bumi",
     title: "Tanamin Bumi",
     category: "Web platform · Environmental action",
-    summary: "A digital platform for environmental programs, tree planting campaigns, donations, and transparent impact tracking.",
-    context: "A public-facing platform connecting people and organizations with reforestation and environmental initiatives across Indonesia.",
+    summary:
+      "A digital platform for environmental programs, tree planting campaigns, donations, and transparent impact tracking.",
+    context:
+      "A public-facing platform connecting people and organizations with reforestation and environmental initiatives across Indonesia.",
     role: "Web development, product implementation, and interface engineering.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Laravel", "PostgreSQL", "REST API"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Laravel",
+      "PostgreSQL",
+      "REST API",
+    ],
     image: "/projects/tanaminbumi-hero.png",
+    access: { visibility: "public", url: "https://tanaminbumi.com" },
     sections: [
-      { title: "The challenge", body: "Environmental action needs more than a campaign message. People need a clear way to discover programs, understand where an action happens, and see how their contribution connects to a wider impact." },
-      { title: "The platform", body: "Tanamin Bumi brings campaigns, donation flows, planting locations, stories, and environmental programs into one public-facing experience. The interface keeps the action visible while giving partner organizations room to communicate their work." },
-      { title: "The experience", body: "The homepage leads with a clear invitation to join the movement, supported by campaign cards, impact areas, partner information, and an interactive program map. The structure is designed to make discovery and participation feel approachable." },
+      {
+        title: "The challenge",
+        body: "Environmental action needs more than a campaign message. People need a clear way to discover programs, understand where an action happens, and see how their contribution connects to a wider impact.",
+      },
+      {
+        title: "The platform",
+        body: "Tanamin Bumi brings campaigns, donation flows, planting locations, stories, and environmental programs into one public-facing experience. The interface keeps the action visible while giving partner organizations room to communicate their work.",
+      },
+      {
+        title: "The experience",
+        body: "The homepage leads with a clear invitation to join the movement, supported by campaign cards, impact areas, partner information, and an interactive program map. The structure is designed to make discovery and participation feel approachable.",
+      },
     ],
   },
   {
     slug: "cloud",
     title: "Cloud",
     category: "Internal platform · File management",
-    summary: "A private cloud storage module that helps teams organize, access, and manage files securely from the browser.",
-    context: "An internal storage platform for NasLabs, built as an extension of an existing Laravel system with shared authentication and user management.",
+    summary:
+      "A private cloud storage module that helps teams organize, access, and manage files securely from the browser.",
+    context:
+      "An internal storage platform for NasLabs, built as an extension of an existing Laravel system with shared authentication and user management.",
     role: "Product implementation, frontend engineering, API integration, and storage workflow development.",
-    stack: ["Next.js", "React", "TypeScript", "shadcn/ui", "Laravel", "PostgreSQL", "REST API"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "shadcn/ui",
+      "Laravel",
+      "PostgreSQL",
+      "REST API",
+    ],
     image: "/projects/cloud-hero.png",
+    access: { visibility: "private" },
     sections: [
-      { title: "The challenge", body: "Teams need a dependable place for working files, but shared folders and ad-hoc storage quickly make ownership, access, and storage usage difficult to manage. The platform needed to feel familiar while respecting the security requirements of an internal system." },
-      { title: "The platform", body: "Cloud provides a focused drive experience for uploading and downloading files, creating nested folders, searching by name, and moving items through a clear browser-based workspace. A trash flow supports restore and permanent deletion without making everyday file management feel heavy." },
-      { title: "The system", body: "The module extends an existing Laravel application instead of introducing a separate identity system. Session-based authentication, user-owned storage, configurable quotas, protected file access, and activity logs keep the experience connected to the organization’s existing operational foundation." },
+      {
+        title: "The challenge",
+        body: "Teams need a dependable place for working files, but shared folders and ad-hoc storage quickly make ownership, access, and storage usage difficult to manage. The platform needed to feel familiar while respecting the security requirements of an internal system.",
+      },
+      {
+        title: "The platform",
+        body: "Cloud provides a focused drive experience for uploading and downloading files, creating nested folders, searching by name, and moving items through a clear browser-based workspace. A trash flow supports restore and permanent deletion without making everyday file management feel heavy.",
+      },
+      {
+        title: "The system",
+        body: "The module extends an existing Laravel application instead of introducing a separate identity system. Session-based authentication, user-owned storage, configurable quotas, protected file access, and activity logs keep the experience connected to the organization’s existing operational foundation.",
+      },
     ],
   },
 ];

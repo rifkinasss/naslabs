@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -8,10 +8,10 @@ import { projects } from "@/content/projects";
 import { siteConfig } from "@/lib/site";
 
 const services = [
-  { number: "01", title: "Custom web applications", description: "Turn manual processes and scattered data into focused tools your team can rely on." },
-  { number: "02", title: "Business websites", description: "A clear, responsive digital presence that helps the right people understand and trust your business." },
-  { number: "03", title: "Backend & APIs", description: "Well-structured APIs and business logic for products, integrations, and frontend teams." },
-  { number: "04", title: "Existing systems", description: "Improve, extend, and maintain software that already matters to your operation." },
+  { number: "01", slug: "custom-web-application", title: "Custom web applications", description: "Turn manual processes and scattered data into focused tools your team can rely on." },
+  { number: "02", slug: "business-website", title: "Business websites", description: "A clear, responsive digital presence that helps the right people understand and trust your business." },
+  { number: "03", slug: "backend-api-development", title: "Backend & APIs", description: "Well-structured APIs and business logic for products, integrations, and frontend teams." },
+  { number: "04", slug: "existing-system-development", title: "Existing systems", description: "Improve, extend, and maintain software that already matters to your operation." },
 ];
 
 const process = [
@@ -49,7 +49,7 @@ export default function Home() {
 
       <section className="section-shell section-block" id="services">
         <div className="section-heading"><p className="eyebrow">What we build</p><h2>Software that makes<br /><em>work clearer.</em></h2><p>Technology is a means to a useful outcome. We keep the scope grounded in your business and the implementation ready for change.</p></div>
-        <div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><span className="service-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><span className="service-arrow" aria-hidden="true">↗</span></article>)}</div>
+        <div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><span className="service-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><Link className="service-arrow" href={`/services#${service.slug}`} aria-label={`Read more about ${service.title}`}>↗</Link></article>)}</div>
       </section>
 
       <section className="dark-panel" id="process"><div className="section-shell process-layout"><div className="section-heading light-heading"><p className="eyebrow">How we work</p><h2>Small steps.<br /><em>Strong foundations.</em></h2><p>A transparent process keeps decisions useful, progress visible, and delivery aligned with the original need.</p></div><div className="process-list">{process.map(([number, title, description]) => <div className="process-item" key={number}><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div></div>)}</div></div></section>

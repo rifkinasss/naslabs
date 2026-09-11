@@ -1,0 +1,19 @@
+{
+  "Navigation": {
+    "services": "Layanan",
+    "work": "Karya",
+    "about": "Tentang",
+    "startProject": "Mulai project",
+    "language": "Bahasa",
+    "english": "English",
+    "indonesian": "Bahasa Indonesia"
+  },
+  "Footer": {
+    "description": "Studio pengembangan software independen.\nBuild. Experiment. Ship.",
+    "explore": "Jelajahi",
+    "conversation": "Mulai percakapan",
+    "tellUs": "Ceritakan project Anda",
+    "backToTop": "Kembali ke atas ↑",
+    "location": "Berbasis di Indonesia · bekerja secara global"
+  }
+}

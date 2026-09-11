@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
