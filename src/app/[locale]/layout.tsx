@@ -11,20 +11,13 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: { default: "NasLabs — Independent Software Development Studio", template: "%s | NasLabs" },
-  description: siteConfig.description,
-  applicationName: siteConfig.name,
-  authors: [{ name: "Rifki Anashirul", url: siteConfig.url }],
-  creator: "Rifki Anashirul",
-  publisher: siteConfig.name,
-  alternates: { canonical: "/" },
-  icons: { icon: "/icon.svg", shortcut: "/icon.svg", apple: "/icon.svg" },
-  openGraph: { title: "NasLabs — Independent Software Development Studio", description: siteConfig.description, url: siteConfig.url, siteName: siteConfig.name, type: "website", locale: "en_US", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "NasLabs — Independent Software Development Studio" }] },
-  twitter: { card: "summary_large_image", title: "NasLabs — Independent Software Development Studio", description: siteConfig.description, images: ["/opengraph-image"] },
-};
+export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {
+  const { locale } = await params;
+  const seo = localizedMetadata(locale as "en" | "id");
+  return { metadataBase: new URL(siteConfig.url), ...seo, title: { default: seo.title as string, template: "%s | NasLabs" }, applicationName: siteConfig.name, authors: [{ name: "Rifki Anashirul", url: siteConfig.url }], creator: "Rifki Anashirul", publisher: siteConfig.name, icons: { icon: "/icon.svg", shortcut: "/icon.svg", apple: "/icon.svg" }, twitter: { card: "summary_large_image", title: seo.title as string, description: seo.description, images: ["/opengraph-image"] } };
+}
 
 export function generateStaticParams() {
   return ["en", "id"].map((locale) => ({ locale }));

@@ -15,5 +15,78 @@
     "tellUs": "Tell us about your project",
     "backToTop": "Back to top ↑",
     "location": "Based in Indonesia · working globally"
+  },
+  "Home": {
+    "studio": "Independent software development studio",
+    "selectedWork": "Selected work",
+    "workHeading": "A little context\ngoes a long way.",
+    "readCaseStudy": "Read case study",
+    "whatWeBuild": "What we build",
+    "servicesHeading": "Software that makes\nwork clearer.",
+    "servicesIntro": "Technology is a means to a useful outcome. We keep the scope grounded in your business and the implementation ready for change.",
+    "howWeWork": "How we work",
+    "aboutStudio": "A founder-led studio",
+    "getToKnow": "Get to know NasLabs",
+    "downloadCv": "Download CV"
+  },
+  "ServicesPage": {
+    "eyebrow": "Services",
+    "title": "Useful software,\ncarefully built.",
+    "intro": "NasLabs helps turn real business needs into reliable web products and systems. Each engagement starts with the problem, not a framework.",
+    "items": {
+      "custom": { "title": "Custom Web Applications", "description": "For teams that need focused tools for real workflows and operational data.", "deliverables": ["Workflow design", "Role-based access", "Dashboard and reporting", "PWA and mobile support"] },
+      "website": { "title": "Business Websites", "description": "For businesses and professionals who need a clear, credible, and useful digital presence.", "deliverables": ["Company profile", "Landing pages", "Portfolio and services", "SEO foundation"] },
+      "backend": { "title": "Backend and API Development", "description": "For products and frontend teams that need dependable business logic and integrations.", "deliverables": ["REST API design", "Authentication", "Database design", "Documentation and testing"] },
+      "existing": { "title": "Existing System Development", "description": "For teams that need to improve, extend, or maintain software already used by the business.", "deliverables": ["Feature development", "Bug fixes and refactoring", "Third-party integrations", "Technical maintenance"] }
+    },
+    "ctaEyebrow": "Not sure where to start?",
+    "ctaTitle": "Bring the messy\nversion.",
+    "ctaLink": "Talk through your project"
+  },
+  "WorkPage": {
+    "eyebrow": "Selected work",
+    "title": "Proof over\npromises.",
+    "intro": "Good work deserves context. These notes document the problems, decisions, and outcomes behind the products NasLabs builds.",
+    "readCaseStudy": "Read case study"
+  },
+  "AboutPage": {
+    "eyebrow": "About NasLabs",
+    "title": "A small studio\nwith room to think.",
+    "intro": "NasLabs is an independent software development studio founded and led by Rifki Anashirul (Kinas).",
+    "person": "The person behind NasLabs",
+    "greeting": "Hi, I'm Rifki.",
+    "nickname": "Most people call me Kinas.",
+    "bio1": "I'm a software developer and the founder of NasLabs. I graduated from Institut Teknologi Kalimantan with a Bachelor's degree in Computer Science (S.Kom.).",
+    "bio2": "My work sits around web applications, business websites, backend systems, and the practical engineering decisions that help software stay useful after it ships.",
+    "education": "Education",
+    "focus": "Focus",
+    "basedIn": "Based in",
+    "downloadCv": "Download CV",
+    "personalNote": "A personal note",
+    "quote": "I started NasLabs to create a space where I can stay close to the problem, make thoughtful engineering decisions, and build software that has a clear reason to exist.",
+    "principles": "Working principles",
+    "principle1": "Clarity before complexity",
+    "principle1Text": "Understand the need before choosing the solution.",
+    "principle2": "Reliable over impressive",
+    "principle2Text": "Build things that are maintainable after launch.",
+    "principle3": "Progress in the open",
+    "principle3Text": "Keep scope, decisions, and trade-offs visible.",
+    "ctaEyebrow": "Work together",
+    "ctaTitle": "Have a useful\nproblem?",
+    "ctaLink": "Start a conversation"
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Start with the\nproblem.",
+    "intro": "Tell us what you are trying to solve, what you have tried, or what is still unclear. A useful first conversation does not need a perfect brief.",
+    "preferEmail": "Prefer email?",
+    "aside": "For a project discussion, include any useful context around the business, current system, desired outcome, and timing.",
+    "name": "Name", "namePlaceholder": "Your name", "email": "Email", "emailPlaceholder": "you@company.com",
+    "help": "What do you need help with?", "select": "Select one", "projectContext": "Project context", "contextPlaceholder": "A few sentences about the project, timeline, or challenge.", "send": "Send inquiry", "sending": "Sending…",
+    "types": { "website": "Business website", "app": "Custom web application", "api": "Backend or API", "existing": "Existing system", "other": "Something else" },
+    "messages": { "name": "Please add your name.", "email": "Please use a valid email address.", "type": "Please choose a project type.", "context": "Please share a little more context.", "check": "Please check the form and try again.", "notConfigured": "The contact service is not configured yet. Please email us directly.", "failed": "We could not send your inquiry. Please try again or email us directly.", "success": "Thanks — your inquiry has been sent. We will get back to you soon." }
+  },
+  "CaseStudy": {
+    "back": "Back to work", "context": "Context", "role": "Role", "technology": "Technology", "access": "Access", "public": "Public project", "private": "Private project", "open": "Open project", "ctaEyebrow": "Have a similar challenge?", "ctaTitle": "Let's talk\nthrough it.", "ctaLink": "Start a conversation"
   }
 }

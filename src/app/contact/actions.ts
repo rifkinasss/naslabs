@@ -5,10 +5,10 @@ import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(2, "Please add your name."),
-  email: z.string().trim().email("Please use a valid email address."),
-  projectType: z.string().min(1, "Please choose a project type."),
-  description: z.string().trim().min(20, "Please share a little more context."),
+  name: z.string().trim().min(2, "messages.name"),
+  email: z.string().trim().email("messages.email"),
+  projectType: z.string().min(1, "messages.type"),
+  description: z.string().trim().min(20, "messages.context"),
 });
 
 export type ContactFormState = { status: "idle" | "error" | "success"; message: string };
@@ -21,7 +21,7 @@ export async function submitContactForm(_previousState: ContactFormState, formDa
   const result = contactSchema.safeParse(Object.fromEntries(formData));
 
   if (!result.success) {
-    return { status: "error", message: result.error.issues[0]?.message ?? "Please check the form and try again." };
+    return { status: "error", message: result.error.issues[0]?.message ?? "messages.check" };
   }
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -29,7 +29,7 @@ export async function submitContactForm(_previousState: ContactFormState, formDa
   const from = process.env.CONTACT_FROM_EMAIL;
 
   if (!apiKey || !to || !from) {
-    return { status: "error", message: "The contact service is not configured yet. Please email us directly." };
+    return { status: "error", message: "messages.notConfigured" };
   }
 
   const resend = new Resend(apiKey);
@@ -43,8 +43,8 @@ export async function submitContactForm(_previousState: ContactFormState, formDa
 
   if (error) {
     console.error("Contact email failed", error);
-    return { status: "error", message: "We could not send your inquiry. Please try again or email us directly." };
+    return { status: "error", message: "messages.failed" };
   }
 
-  return { status: "success", message: "Thanks — your inquiry has been sent. We will get back to you soon." };
+  return { status: "success", message: "messages.success" };
 }

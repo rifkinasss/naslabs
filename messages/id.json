@@ -15,5 +15,78 @@
     "tellUs": "Ceritakan project Anda",
     "backToTop": "Kembali ke atas ↑",
     "location": "Berbasis di Indonesia · bekerja secara global"
+  },
+  "Home": {
+    "studio": "Studio pengembangan software independen",
+    "selectedWork": "Karya pilihan",
+    "workHeading": "Lihat konteks di balik\nsetiap project.",
+    "readCaseStudy": "Baca case study",
+    "whatWeBuild": "Yang kami bangun",
+    "servicesHeading": "Software yang membuat\npekerjaan lebih jelas.",
+    "servicesIntro": "Teknologi adalah alat untuk mencapai hasil yang berguna. Kami menjaga scope tetap relevan dengan kebutuhan bisnis dan siap dikembangkan.",
+    "howWeWork": "Cara kami bekerja",
+    "aboutStudio": "Studio founder-led",
+    "getToKnow": "Kenali NasLabs",
+    "downloadCv": "Download CV"
+  },
+  "ServicesPage": {
+    "eyebrow": "Layanan",
+    "title": "Software yang berguna,\ndibangun dengan cermat.",
+    "intro": "NasLabs membantu mengubah kebutuhan bisnis yang nyata menjadi produk web dan sistem yang dapat diandalkan. Setiap project dimulai dari masalah, bukan framework.",
+    "items": {
+      "custom": { "title": "Aplikasi Web Custom", "description": "Untuk tim yang membutuhkan alat kerja terarah untuk alur kerja dan data operasional yang nyata.", "deliverables": ["Perancangan alur kerja", "Akses berbasis peran", "Dashboard dan laporan", "Dukungan PWA dan mobile"] },
+      "website": { "title": "Website Bisnis", "description": "Untuk bisnis dan profesional yang membutuhkan kehadiran digital yang jelas, kredibel, dan berguna.", "deliverables": ["Company profile", "Landing page", "Portfolio dan layanan", "Fondasi SEO"] },
+      "backend": { "title": "Pengembangan Backend dan API", "description": "Untuk produk dan tim frontend yang membutuhkan business logic dan integrasi yang dapat diandalkan.", "deliverables": ["Perancangan REST API", "Autentikasi", "Perancangan database", "Dokumentasi dan testing"] },
+      "existing": { "title": "Pengembangan Sistem Existing", "description": "Untuk tim yang perlu memperbaiki, mengembangkan, atau merawat software yang sudah digunakan bisnis.", "deliverables": ["Pengembangan fitur", "Perbaikan bug dan refactoring", "Integrasi pihak ketiga", "Pemeliharaan teknis"] }
+    },
+    "ctaEyebrow": "Belum yakin harus mulai dari mana?",
+    "ctaTitle": "Bawa versi yang\nmasih berantakan.",
+    "ctaLink": "Diskusikan project Anda"
+  },
+  "WorkPage": {
+    "eyebrow": "Karya pilihan",
+    "title": "Bukti lebih berarti\ndaripada janji.",
+    "intro": "Pekerjaan yang baik perlu konteks. Catatan ini mendokumentasikan masalah, keputusan, dan hasil di balik produk yang NasLabs bangun.",
+    "readCaseStudy": "Baca case study"
+  },
+  "AboutPage": {
+    "eyebrow": "Tentang NasLabs",
+    "title": "Studio kecil\ndengan ruang untuk berpikir.",
+    "intro": "NasLabs adalah studio pengembangan software independen yang didirikan dan dipimpin oleh Rifki Anashirul (Kinas).",
+    "person": "Orang di balik NasLabs",
+    "greeting": "Hai, saya Rifki.",
+    "nickname": "Kebanyakan orang memanggil saya Kinas.",
+    "bio1": "Saya adalah software developer dan pendiri NasLabs. Saya lulus dari Institut Teknologi Kalimantan dengan gelar Sarjana Komputer (S.Kom.).",
+    "bio2": "Pekerjaan saya berfokus pada aplikasi web, website bisnis, sistem backend, dan keputusan engineering praktis yang membuat software tetap berguna setelah dirilis.",
+    "education": "Pendidikan",
+    "focus": "Fokus",
+    "basedIn": "Berbasis di",
+    "downloadCv": "Download CV",
+    "personalNote": "Catatan pribadi",
+    "quote": "Saya memulai NasLabs untuk tetap dekat dengan masalah, membuat keputusan engineering dengan penuh pertimbangan, dan membangun software yang punya alasan jelas untuk hadir.",
+    "principles": "Prinsip kerja",
+    "principle1": "Kejelasan sebelum kompleksitas",
+    "principle1Text": "Pahami kebutuhan sebelum memilih solusi.",
+    "principle2": "Dapat diandalkan, bukan sekadar mengesankan",
+    "principle2Text": "Bangun sesuatu yang mudah dirawat setelah dirilis.",
+    "principle3": "Progres yang terbuka",
+    "principle3Text": "Jaga scope, keputusan, dan trade-off tetap terlihat.",
+    "ctaEyebrow": "Bekerja bersama",
+    "ctaTitle": "Punya masalah\nyang berguna untuk diselesaikan?",
+    "ctaLink": "Mulai percakapan"
+  },
+  "ContactPage": {
+    "eyebrow": "Kontak",
+    "title": "Mulai dari\nmasalahnya.",
+    "intro": "Ceritakan apa yang ingin Anda selesaikan, apa yang sudah dicoba, atau bagian yang masih belum jelas. Percakapan awal yang berguna tidak membutuhkan brief yang sempurna.",
+    "preferEmail": "Lebih suka email?",
+    "aside": "Untuk diskusi project, sertakan konteks yang membantu tentang bisnis, sistem saat ini, hasil yang diinginkan, dan waktunya.",
+    "name": "Nama", "namePlaceholder": "Nama Anda", "email": "Email", "emailPlaceholder": "anda@perusahaan.com",
+    "help": "Apa yang ingin dibantu?", "select": "Pilih salah satu", "projectContext": "Konteks project", "contextPlaceholder": "Beberapa kalimat tentang project, timeline, atau tantangannya.", "send": "Kirim inquiry", "sending": "Mengirim…",
+    "types": { "website": "Website bisnis", "app": "Aplikasi web custom", "api": "Backend atau API", "existing": "Sistem existing", "other": "Lainnya" },
+    "messages": { "name": "Silakan isi nama Anda.", "email": "Silakan gunakan alamat email yang valid.", "type": "Silakan pilih jenis project.", "context": "Silakan tambahkan sedikit konteks.", "check": "Silakan periksa form dan coba lagi.", "notConfigured": "Layanan kontak belum dikonfigurasi. Silakan kirim email langsung kepada kami.", "failed": "Inquiry tidak dapat dikirim. Silakan coba lagi atau kirim email langsung kepada kami.", "success": "Terima kasih — inquiry Anda sudah terkirim. Kami akan segera menghubungi Anda." }
+  },
+  "CaseStudy": {
+    "back": "Kembali ke karya", "context": "Konteks", "role": "Peran", "technology": "Teknologi", "access": "Akses", "public": "Project publik", "private": "Project privat", "open": "Buka project", "ctaEyebrow": "Punya tantangan serupa?", "ctaTitle": "Mari bicarakan\nsolusinya.", "ctaLink": "Mulai percakapan"
   }
 }
