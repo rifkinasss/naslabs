@@ -1,0 +1,73 @@
+---
+slug: tanamin-bumi
+locale: id
+title: Tanamin Bumi
+description: Platform digital untuk program lingkungan, kampanye penanaman pohon, donasi, dan pelacakan dampak yang transparan.
+category: Platform web · Aksi lingkungan
+featured: false
+cover: /projects/tanaminbumi-hero.png
+stack:
+  - Next.js
+  - TypeScript
+  - Tailwind CSS
+  - Laravel
+  - PostgreSQL
+  - REST API
+role: Pengembangan web full-stack, implementasi produk, dan engineering antarmuka.
+status: completed
+externalUrl: https://tanaminbumi.com
+---
+
+## Konteks
+
+Tanamin Bumi adalah platform publik untuk program lingkungan dan inisiatif CSR/TJSLP. Platform ini menghubungkan partisipasi publik, pengelolaan program, donasi, pemetaan aktivitas, monitoring, dan dokumentasi dalam satu konteks operasional.
+
+## Masalah
+
+Program lingkungan lebih luas daripada halaman kampanye. Masyarakat perlu menemukan program, memahami lokasi aktivitas, berkontribusi ketika alur donasi tersedia, lalu mengikuti catatan aktivitas yang terjadi. Platform ini membutuhkan struktur bersama untuk langkah-langkah tersebut tanpa mereduksinya menjadi sekadar permukaan pemasaran.
+
+<Flow label="Siklus program">CSR / TJSLP → Program → Partisipasi / Pendanaan → Aktivitas → Monitoring → Dokumentasi</Flow>
+
+## Peran saya
+
+Saya bekerja sebagai pengembang web full-stack pada frontend Next.js, backend Laravel, integrasi REST API, alur berbasis PostgreSQL, implementasi antarmuka, testing, debugging, dokumentasi, dan maintenance. Case study ini tidak mengklaim kepemilikan tunggal atas seluruh produk.
+
+## Pendekatan sistem
+
+Aplikasi disusun dengan lapisan client dan lapisan aplikasi berbasis API bersama. Pembagian ini membuat tanggung jawab frontend dan backend lebih jelas, sekaligus memberi ruang bagi beberapa client untuk menggunakan alur domain yang sama.
+
+<Flow label="Lapisan aplikasi">Aplikasi client → REST API → Backend Laravel → PostgreSQL</Flow>
+
+## Donasi publik
+
+Pekerjaan donasi mencakup jalur dari kampanye publik hingga kontribusi tercatat. Halaman kampanye dan detail mengarah ke alur donasi, transaksi pembayaran, status transaksi, dan catatan kontribusi. Konteks implementasinya mencakup DOKU dan Virtual Account; case study ini tidak mengklaim tingkat keberhasilan pembayaran di production.
+
+<Flow label="Alur donasi">Kampanye → Detail kampanye → Donasi → Transaksi pembayaran → Status transaksi → Catatan kontribusi</Flow>
+
+## Pemetaan aktivitas
+
+Program dan aktivitas menggunakan hierarki geografis Province, Regency, District, dan Village. API lokasi serta data lokasi mendukung struktur tersebut. GIS, Leaflet, dan PostGIS muncul dalam arah teknis yang lebih luas; case study ini tidak mengklaim semua kemampuan geospasial telah dideploy ke production.
+
+<Flow label="Struktur lokasi">Province → Regency → District → Village</Flow>
+
+## Monitoring dan dokumentasi
+
+Platform menghubungkan program dengan aktivitas, catatan monitoring, progres, dan dokumentasi. Nilai yang dapat didukung oleh bukti yang tersedia adalah struktur workflow yang dapat ditelusuri, bukan metrik dampak lingkungan yang tidak tersedia.
+
+## Konteks engineering
+
+Implementasi menggunakan Next.js, TypeScript, Tailwind CSS, Laravel, PostgreSQL, dan REST API. Pest digunakan dalam konteks testing. Rencana delivery berisi 33 backlog item dan 137 Story Points.
+
+<Evidence label="Konteks delivery">33 backlog item · 137 Story Points</Evidence>
+
+## Pengakuan
+
+Tanamin Bumi meraih Juara 1 pada Student Category di KRENOVA Balikpapan 2025. Ini adalah pengakuan yang terkait dengan karya, bukan pengganti metrik dampak produk atau lingkungan.
+
+## Hasil
+
+Pekerjaan ini menghasilkan platform publik yang terstruktur untuk workflow program lingkungan, partisipasi, donasi, aktivitas, monitoring, dan dokumentasi. Bukti yang tersedia mendukung hasil pada level platform, tetapi tidak mendukung klaim tentang skala pengguna atau hasil lingkungan.
+
+## Refleksi
+
+Tanamin Bumi memperkuat pemahaman saya tentang pertemuan antara keputusan frontend, kontrak API, data relasional, kebutuhan bisnis, testing, dan maintenance dalam produk full-stack. Saya juga belajar pentingnya mendokumentasikan workflow sebelum memoles antarmuka.

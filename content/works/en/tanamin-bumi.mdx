@@ -1,0 +1,73 @@
+---
+slug: tanamin-bumi
+locale: en
+title: Tanamin Bumi
+description: A digital platform for environmental programs, tree planting campaigns, donations, and transparent impact tracking.
+category: Web platform · Environmental action
+featured: false
+cover: /projects/tanaminbumi-hero.png
+stack:
+  - Next.js
+  - TypeScript
+  - Tailwind CSS
+  - Laravel
+  - PostgreSQL
+  - REST API
+role: Full-stack web development, product implementation, and interface engineering.
+status: completed
+externalUrl: https://tanaminbumi.com
+---
+
+## Context
+
+Tanamin Bumi is a public-facing platform for environmental programs and CSR/TJSLP initiatives. It connects public participation, program management, donations, activity mapping, monitoring, and documentation in one operating context.
+
+## The problem
+
+Environmental programs span more than a campaign page. People need to find a program, understand where an activity happens, contribute when a donation flow is available, and follow the record of what happens next. The platform needed to give those steps a shared structure without reducing the work to a single marketing surface.
+
+<Flow label="Program lifecycle">CSR / TJSLP → Program → Participation / Funding → Activity → Monitoring → Documentation</Flow>
+
+## My role
+
+I worked as a full-stack web developer across the Next.js frontend, Laravel backend, REST API integration, PostgreSQL-backed workflows, interface implementation, testing, debugging, documentation, and maintenance. The work was collaborative implementation rather than a claim of sole ownership of the whole product.
+
+## System approach
+
+The application was organized around a client layer and a shared API-backed application layer. This kept frontend and backend responsibilities explicit while leaving room for different client applications to consume the same domain workflows.
+
+<Flow label="Application layers">Client applications → REST API → Laravel backend → PostgreSQL</Flow>
+
+## Public donation
+
+The donation work covered the path from a public campaign to a recorded contribution. Campaign and detail pages led into a donation flow, payment transaction, transaction status, and contribution record. DOKU and Virtual Account workflows were part of the implementation context; this case study does not claim a specific production payment success rate.
+
+<Flow label="Donation workflow">Campaign → Campaign detail → Donation → Payment transaction → Transaction status → Contribution record</Flow>
+
+## Activity mapping
+
+Programs and activities used a geographic hierarchy of Province, Regency, District, and Village. Location APIs and location data supported the structure. GIS, Leaflet, and PostGIS appeared in the broader technical direction; this case study does not claim that every geospatial capability was deployed to production.
+
+<Flow label="Location structure">Province → Regency → District → Village</Flow>
+
+## Monitoring and documentation
+
+The platform connected a program to its activities, monitoring records, progress, and documentation. The value here is the traceable structure of the workflow; no unsupported environmental impact metric is presented as an outcome.
+
+## Engineering context
+
+The implementation used Next.js, TypeScript, Tailwind CSS, Laravel, PostgreSQL, and REST APIs. Pest was used in the testing context. The delivery plan contained 33 backlog items and 137 Story Points.
+
+<Evidence label="Delivery context">33 backlog items · 137 Story Points</Evidence>
+
+## Recognition
+
+Tanamin Bumi received 1st Place in the Student Category at KRENOVA Balikpapan 2025. This is recognition associated with the work, not a substitute for measured product or environmental impact.
+
+## Outcome
+
+The work produced a structured public-facing platform for environmental program, participation, donation, activity, monitoring, and documentation workflows. The available evidence supports that platform-level outcome, but not claims about user scale or environmental results.
+
+## Reflection
+
+Tanamin Bumi strengthened my understanding of how frontend decisions, API contracts, relational data, business requirements, testing, and maintenance meet in a full-stack product. It also reinforced the importance of documenting the workflow before polishing the interface.

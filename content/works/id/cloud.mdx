@@ -1,0 +1,67 @@
+---
+slug: cloud
+locale: id
+title: Cloud
+description: Modul penyimpanan cloud privat yang membantu tim mengatur, mengakses, dan mengelola file dengan aman dari browser.
+category: Platform internal · Manajemen file
+featured: false
+cover: /projects/cloud-hero.png
+stack:
+  - Next.js
+  - React
+  - TypeScript
+  - shadcn/ui
+  - Laravel
+  - PostgreSQL
+  - REST API
+role: Implementasi produk, engineering frontend, integrasi API, dan pengembangan alur penyimpanan.
+status: completed
+---
+
+## Konteks
+
+Cloud adalah sistem manajemen file privat dan internal untuk NasLabs. Sistem ini dibangun ulang setelah implementasi sebelumnya tidak cukup andal dan sulit dikembangkan, sehingga proses rebuild menjadi latihan untuk memperjelas batas sistem sekaligus memperbaiki pengalaman antarmuka.
+
+## Masalah
+
+Manajemen file menjadi rapuh ketika kepemilikan, akses, autentikasi, penggunaan storage, dan aturan penghapusan masih implisit. Cloud membutuhkan ruang kerja yang dapat diandalkan dengan aturan yang jelas: pengguna dapat memahami apa yang dimiliki, apa yang bisa diakses, apa yang ada di trash, dan berapa sisa storage.
+
+## Batas sistem
+
+Pengalaman browser terhubung ke Laravel API dan metadata berbasis PostgreSQL, sementara private storage menyimpan binary file. Autentikasi, authorization, catatan file, dan operasi storage dipertahankan dalam satu batas aplikasi.
+
+<Flow label="Batas aplikasi">Frontend Next.js → Laravel API → Autentikasi / authorization / business rules → Metadata PostgreSQL</Flow>
+
+## Autentikasi dan authorization
+
+Konteks implementasinya mencakup autentikasi session dan cookie Laravel, Sanctum SPA/cookie authentication, penanganan CSRF dan CORS, protected route, serta authorization berbasis ownership. Ini penting karena pada sistem file privat, request yang berhasil tidak otomatis berarti pengguna boleh melihat atau mengubah resource.
+
+## Siklus file
+
+Siklus utama dirancang untuk memisahkan pekerjaan file sehari-hari dari tindakan destruktif. File yang di-upload menjadi item aktif yang dapat dipindahkan, diubah nama, dipreview, atau didownload sebelum masuk ke trash. Restore dan permanent delete menjadi keputusan terpisah.
+
+<Flow label="Siklus file">Upload → Aktif → Pindah / ubah nama / preview / download → Trash → Restore / permanent delete</Flow>
+
+## Kemampuan workspace
+
+Workspace menyatukan manajemen file dan folder, upload, download, preview, rename, move, delete, trash, restore, storage quota, activity, profile, dan settings dalam satu produk internal. Tujuannya adalah alur operasi yang koheren, bukan kumpulan layar yang terpisah.
+
+## Dokumentasi engineering
+
+Konteks dokumentasi API menggunakan Laravel Scramble. Ini membantu menjaga permukaan API tetap dapat diperiksa saat frontend dan backend dikembangkan serta di-debug bersama.
+
+## Verifikasi dan kenyataan deployment
+
+Bukti engineering yang tersedia mencatat 107 backend test, 644 assertion, dan 16 database migration. Angka tersebut adalah fakta verifikasi dan implementasi, bukan metrik bisnis atau adopsi.
+
+<Evidence label="Verifikasi engineering">107 backend test passed · 644 assertion · 16 database migration</Evidence>
+
+Konteks deployment mencakup `cloud.naslabs.my.id` dan `api-cloud.naslabs.my.id`, serta debugging lokal dan deployment. Instance publik tidak selalu tersedia selama pengerjaan, sehingga case study ini tidak mengklaim uptime tanpa gangguan.
+
+## Hasil
+
+Cloud membangun batas storage privat yang lebih jelas di sekitar ownership, access, lifecycle, quota, dan activity. Hasil terkuat yang didukung adalah fondasi sistem internal yang lebih eksplisit, bukan klaim tentang skala publik.
+
+## Refleksi
+
+Rebuild Cloud mengajarkan saya untuk memperlakukan aturan authorization dan lifecycle sebagai perilaku produk, bukan detail backend semata. Saya juga melihat bahwa operasi file yang andal bergantung pada kontrak yang dapat diprediksi antara UI, API, autentikasi, dan storage.

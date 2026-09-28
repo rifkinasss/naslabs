@@ -1,0 +1,53 @@
+---
+slug: pondflow
+locale: id
+title: PondFlow
+description: Platform praktis bagi pembudidaya ikan untuk memantau siklus kolam, biaya, dan performa panen.
+category: Aplikasi web · Operasional akuakultur
+featured: true
+cover: /projects/pondflow-hero.png
+stack:
+  - Next.js
+  - TypeScript
+  - SQLite
+  - Google Gemini
+  - Capacitor
+  - REST API
+role: Desain produk, pengembangan full-stack, pemodelan data, dan implementasi aplikasi mobile.
+status: completed
+externalUrl: https://pondflow.naslabs.my.id
+---
+
+## Konteks
+
+PondFlow adalah eksperimen produk personal untuk operasional budidaya ikan. Saya membawanya dari requirements dan PRD, ke user flow, lalu implementasi untuk mengeksplorasi struktur produk operasional yang praktis sebelum menambah lebih banyak permukaan.
+
+## Masalah
+
+Detail operasional penting tersebar di catatan, spreadsheet, dan ingatan. Produk ini membutuhkan model yang dapat menampung aktivitas kolam, siklus budidaya, biaya, panen, dan performa tanpa membuat pencatatan harian terasa seperti beban administratif.
+
+<Flow label="Model operasional">Operasi akuakultur → Kolam / kultur → Siklus operasional → Catatan / biaya → Panen / performa → Ringkasan operasional</Flow>
+
+## Struktur produk
+
+PondFlow menyatukan pengelolaan kolam, catatan keuangan, siklus produksi, dan performa panen dalam satu ruang kerja. Model ini sengaja dijelaskan sebagai workflow produk, bukan klaim tentang schema database final.
+
+## Pengalaman dashboard
+
+Dashboard mendukung tampilan metrik kolam, informasi keuangan, performa siklus, dan ringkasan operasional. Hero asset yang ada menunjukkan arah produk: satu permukaan untuk membaca sinyal operasional dan finansial secara bersamaan.
+
+## Arah lapangan dan mobile
+
+Aplikasi web ini responsif dan diarahkan untuk penggunaan PWA serta Android. Capacitor mendukung arah aplikasi mobile. Repository tidak menyediakan data adopsi, sehingga case study ini tidak mengklaim penggunaan lapangan atau retention.
+
+## Arah teknis
+
+Stack saat ini mencakup Next.js, TypeScript, SQLite, Google Gemini, Capacitor, dan REST API. Google Gemini tercatat sebagai bagian dari konteks stack; tidak ada fitur spesifik berbasis Gemini yang diklaim tanpa bukti implementasi pendukung.
+
+## Hasil
+
+PondFlow berkembang dari ide produk personal menjadi fondasi produk web dan mobile-oriented yang dapat digunakan untuk testing dan iterasi. Hasil yang didukung adalah fondasi produk tersebut, bukan klaim tentang adopsi bisnis atau skala production.
+
+## Refleksi
+
+Eksperimen ini memberi saya alur yang dapat diulang: define, build, use dan test, observe, lalu refine. Saya juga melihat pentingnya model domain yang jelas sebelum berinvestasi pada layar yang lebih kompleks.

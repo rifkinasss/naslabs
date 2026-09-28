@@ -1,0 +1,47 @@
+.v2-notes-page__intro { padding-block: clamp(5rem, 12vw, 10rem) var(--v2-section-space); border-bottom: 1px solid var(--v2-border); }
+.v2-notes-page__archive { padding-block: var(--v2-section-space); }
+.v2-notes-page__empty { max-width: 42rem; min-height: 20rem; padding-top: var(--v2-space-5); border-top: 1px solid var(--v2-border-strong); }
+.v2-notes-page__empty h2 { max-width: 15ch; margin: var(--v2-space-5) 0; }
+.v2-notes-page__empty p { max-width: 36rem; color: var(--v2-muted-foreground); }
+.v2-note-list { display: grid; border-top: 1px solid var(--v2-border-strong); }
+.v2-note-item { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--v2-content-gap); padding-block: var(--v2-space-6); border-bottom: 1px solid var(--v2-border); }
+.v2-note-item__index { color: var(--v2-muted); font-family: var(--v2-font-mono); font-size: .75rem; }
+.v2-note-item__content { min-width: 0; }
+.v2-note-item__heading { display: flex; align-items: baseline; justify-content: space-between; gap: var(--v2-space-4); }
+.v2-note-item__heading p, .v2-note-item__heading h2 { margin: 0; }
+.v2-note-item__heading p { color: var(--v2-muted); }
+.v2-note-item__heading h2 a { color: inherit; text-decoration: none; }
+.v2-note-item__heading h2 a:hover { color: var(--v2-primary); }
+.v2-note-item__description { max-width: 42rem; margin: var(--v2-space-4) 0 0; color: var(--v2-muted-foreground); line-height: 1.65; }
+.v2-note-item__details { display: flex; flex-wrap: wrap; gap: var(--v2-space-2) var(--v2-space-5); margin-top: var(--v2-space-4); color: var(--v2-muted-foreground); font-size: .75rem; }
+.v2-note-item__link { margin-top: var(--v2-space-4); }
+.v2-note-detail { padding-block: var(--v2-space-7) var(--v2-section-space); }
+.v2-note-detail__back { margin-bottom: clamp(3rem, 8vw, 7rem); }
+.v2-note-detail__hero { max-width: 58rem; }
+.v2-note-detail__hero > * { margin-block: 0 var(--v2-space-5); }
+.v2-note-detail__hero .v2-label { color: var(--v2-muted); }
+.v2-note-detail__date { display: flex; flex-wrap: wrap; gap: var(--v2-space-2); color: var(--v2-muted); font-size: .8rem; }
+.v2-note-detail__cover { margin: var(--v2-space-8) 0 0; overflow: hidden; background: var(--v2-surface-subtle); }
+.v2-note-detail__cover img { display: block; width: 100%; height: auto; }
+.v2-note-detail__body { width: min(100%, 42rem); margin: clamp(4rem, 9vw, 8rem) auto 0; }
+.v2-note-prose { color: var(--v2-foreground); font-size: 1.0625rem; line-height: 1.8; }
+.v2-note-prose > * { margin-block: 0 var(--v2-space-5); }
+.v2-note-prose h2 { margin-top: var(--v2-space-9); color: var(--v2-foreground); font-size: clamp(1.75rem, 3.2vw, 2.75rem); line-height: 1.08; letter-spacing: -.035em; }
+.v2-note-prose h3 { margin-top: var(--v2-space-7); color: var(--v2-foreground); font-size: 1.4rem; line-height: 1.2; letter-spacing: -.025em; }
+.v2-note-prose p { max-width: 42rem; }
+.v2-note-prose a { color: var(--v2-primary); text-decoration: underline; text-underline-offset: .2em; }
+.v2-note-prose ul, .v2-note-prose ol { padding-left: 1.4rem; }
+.v2-note-prose li + li { margin-top: var(--v2-space-2); }
+.v2-note-prose blockquote { padding-left: var(--v2-space-5); border-left: 2px solid var(--v2-primary); color: var(--v2-muted-foreground); }
+.v2-note-prose code { padding: .12em .3em; background: var(--v2-surface-subtle); font-family: var(--v2-font-mono); font-size: .88em; }
+.v2-note-prose pre { overflow-x: auto; padding: var(--v2-space-5); background: var(--v2-inverse); color: var(--v2-inverse-foreground); line-height: 1.6; }
+.v2-note-prose pre code { padding: 0; background: transparent; color: inherit; }
+.v2-note-prose hr { border: 0; border-top: 1px solid var(--v2-border); }
+
+.v2-home__notes-preview { display: grid; gap: var(--v2-space-5); max-width: 48rem; margin-top: var(--v2-space-8); }
+.v2-home__note-row { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: var(--v2-space-4); padding-block: var(--v2-space-4); border-bottom: 1px solid var(--v2-border); color: inherit; text-decoration: none; }
+.v2-home__note-row strong, .v2-home__note-row small { display: block; }
+.v2-home__note-row strong { font-weight: 600; }
+.v2-home__note-row small { margin-top: var(--v2-space-1); color: var(--v2-muted); font-size: .75rem; }
+
+@media (max-width: 47.99rem) { .v2-note-item { grid-template-columns: 2rem 1fr; gap: var(--v2-space-4); } .v2-note-item__heading { align-items: flex-start; flex-direction: column; } .v2-home__note-row { grid-template-columns: 1fr; gap: var(--v2-space-2); } }

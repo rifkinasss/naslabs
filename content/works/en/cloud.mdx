@@ -1,0 +1,67 @@
+---
+slug: cloud
+locale: en
+title: Cloud
+description: A private cloud storage module that helps teams organize, access, and manage files securely from the browser.
+category: Internal platform · File management
+featured: false
+cover: /projects/cloud-hero.png
+stack:
+  - Next.js
+  - React
+  - TypeScript
+  - shadcn/ui
+  - Laravel
+  - PostgreSQL
+  - REST API
+role: Product implementation, frontend engineering, API integration, and storage workflow development.
+status: completed
+---
+
+## Context
+
+Cloud is a private and internal file-management system for NasLabs. It was rebuilt after an earlier implementation proved unreliable and difficult to evolve, making the rebuild as much an exercise in system boundaries as in interface work.
+
+## The problem
+
+File management becomes fragile when ownership, access, authentication, storage usage, and deletion rules are implicit. Cloud needed a dependable workspace where those rules were explicit: users should know what they own, what they can access, what is in the trash, and how much storage remains.
+
+## System boundaries
+
+The browser experience was connected to a Laravel API and PostgreSQL-backed metadata, while private storage held the file binaries. The system kept authentication, authorization, file records, and storage operations inside a single application boundary.
+
+<Flow label="Application boundary">Next.js frontend → Laravel API → Authentication / authorization / business rules → PostgreSQL metadata</Flow>
+
+## Authentication and authorization
+
+The implementation context included Laravel session and cookie authentication, Sanctum SPA/cookie authentication, CSRF and CORS handling, protected routes, and ownership authorization. These details mattered because a private file system cannot treat a successful request as proof that a user should see or mutate a resource.
+
+## File lifecycle
+
+The main lifecycle was designed to keep ordinary file work separate from destructive actions. Uploads became active items that could be moved, renamed, previewed, or downloaded before entering trash. Restore and permanent deletion were separate decisions.
+
+<Flow label="File lifecycle">Upload → Active → Move / rename / preview / download → Trash → Restore / permanent delete</Flow>
+
+## Workspace capabilities
+
+The workspace grouped file and folder management, upload, download, preview, rename, move, delete, trash, restore, storage quota, activity, profile, and settings into one internal product. The goal was a coherent set of operations rather than a collection of disconnected screens.
+
+## Engineering documentation
+
+The API documentation context used Laravel Scramble. It provided a way to keep the API surface inspectable while the frontend and backend were developed and debugged together.
+
+## Verification and deployment reality
+
+The available engineering evidence records 107 backend tests, 644 assertions, and 16 database migrations. These are verification and implementation facts, not business or adoption metrics.
+
+<Evidence label="Engineering verification">107 backend tests passed · 644 assertions · 16 database migrations</Evidence>
+
+The deployment context included `cloud.naslabs.my.id` and `api-cloud.naslabs.my.id`, as well as local and deployment debugging. The public instance was not continuously available during the work, so this case study does not claim uninterrupted uptime.
+
+## Outcome
+
+Cloud established a clearer private storage boundary around ownership, access, lifecycle, quota, and activity. The strongest supported outcome is a more explicit internal system foundation, not a claim about public scale.
+
+## Reflection
+
+Rebuilding Cloud taught me to treat authorization and lifecycle rules as product behavior, not backend details. It also made the cost of unclear boundaries visible: reliable file operations depend on predictable contracts between UI, API, authentication, and storage.

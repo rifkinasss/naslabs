@@ -2,19 +2,122 @@
   "Navigation": {
     "services": "Services",
     "work": "Work",
+    "works": "Works",
+    "experiments": "Experiments",
+    "notes": "Notes",
     "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "theme": "Theme",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "useLightTheme": "Use light theme",
+    "useDarkTheme": "Use dark theme",
+    "chooseTheme": "Choose theme",
+    "menu": "Open navigation",
     "startProject": "Start a project",
     "language": "Language",
     "english": "English",
     "indonesian": "Bahasa Indonesia"
   },
+  "System": {
+    "notFound": {
+      "label": "404 / NOT FOUND",
+      "title": "This path leads nowhere.",
+      "description": "The page may have moved, been removed, or the URL may be incorrect.",
+      "statusLabel": "STATUS",
+      "home": "Back to home",
+      "works": "View works"
+    },
+    "error": {
+      "label": "SYSTEM ERROR",
+      "title": "Something did not go as planned.",
+      "description": "An error occurred while loading this part of NasLabs.",
+      "statusLabel": "STATUS",
+      "retry": "Try again",
+      "home": "Back home"
+    }
+  },
   "Footer": {
-    "description": "Independent software development studio.\nBuild. Experiment. Ship.",
+    "description": "Personal digital lab for building, learning, and exploring technology.",
+    "descriptor": "Personal Digital Lab",
+    "principle": "Build. Learn. Explore.",
     "explore": "Explore",
+    "navigation": "Navigation",
+    "contact": "Contact",
     "conversation": "Start a conversation",
     "tellUs": "Tell us about your project",
     "backToTop": "Back to top ↑",
     "location": "Based in Indonesia · working globally"
+  },
+  "HomeV2": {
+    "hero": {
+      "eyebrow": "NASLABS / PERSONAL DIGITAL LAB",
+      "title": "Turning ideas into something real.",
+      "description": "A personal space for works, experiments, notes, and the ongoing practice of learning through technology.",
+      "exploreWorks": "View works",
+      "about": "About me",
+      "downloadCv": "Download CV",
+      "signatureLabel": "NasLabs areas of exploration"
+    },
+    "works": {
+    "eyebrow": "Selected works",
+      "title": "Things built with context.",
+      "description": "A selection of projects that made an idea, system, or way of working more tangible.",
+    "readMore": "View case study",
+    "viewAll": "View all works",
+    "carouselLabel": "Selected works showcase",
+    "previous": "Previous",
+    "next": "Next",
+    "position": "slide"
+    },
+    "areas": {
+    "eyebrow": "Areas",
+      "title": "Where the work tends to happen.",
+      "description": "A few recurring areas of practice, from interfaces people use to systems that keep them running.",
+      "items": {
+        "web": { "title": "Web", "description": "Interfaces and applications that make complex work easier to see and use." },
+        "data": { "title": "Data", "description": "Models, records, and flows that turn activity into something useful to understand." },
+        "systems": { "title": "Systems", "description": "The structure behind products, operations, integrations, and everyday decisions." },
+        "infrastructure": { "title": "Infrastructure", "description": "The tools and environments that help software stay available and maintainable." }
+      }
+    },
+    "experiments": {
+    "eyebrow": "Experiments",
+      "title": "Not everything has to become a product.",
+      "description": "Some things are built to test an idea, learn a system, or follow a question a little further.",
+      "stateLabel": "A space in progress",
+      "state": "Experiments will appear here as they become ready to share.",
+      "viewAll": "View all experiments"
+    },
+    "notes": {
+    "eyebrow": "Notes",
+      "title": "Writing down what I learn.",
+      "description": "Notes will collect the questions, decisions, and observations that grow out of making things.",
+      "stateLabel": "Notes coming together",
+      "state": "The first notes are being shaped into a place worth returning to.",
+      "viewAll": "View all notes",
+      "label": "Note",
+      "minutes": "min read"
+    },
+    "about": {
+    "eyebrow": "About",
+      "title": "Understanding how things work, then trying to build them.",
+    "description": "NasLabs is a personal digital lab by Rifki Anashirul: a place for works, experiments, and notes across technology.",
+    "context": "I’m a Full-Stack Web Developer and the person behind NasLabs. The lab stays close to real projects, thoughtful engineering decisions, and the questions that appear while making things.",
+    "facts": {
+      "role": "Full-Stack Web Developer",
+      "education": "Information Systems · ITK",
+      "areas": "Web · Data · Systems · Infrastructure"
+    },
+      "cta": "About me"
+    },
+    "contact": {
+    "eyebrow": "Contact",
+      "title": "Have something to build?",
+      "description": "If there is a problem, idea, or system worth exploring together, start with the context you have.",
+      "cta": "Start a conversation"
+    }
   },
   "Home": {
     "studio": "Independent software development studio",
@@ -56,9 +159,10 @@
     "person": "The person behind NasLabs",
     "greeting": "Hi, I'm Rifki.",
     "nickname": "Most people call me Kinas.",
-    "bio1": "I'm a software developer and the founder of NasLabs. I graduated from Institut Teknologi Kalimantan with a Bachelor's degree in Computer Science (S.Kom.).",
+    "bio1": "I'm a Full-Stack Web Developer and the founder of NasLabs. I studied Information Systems at Institut Teknologi Kalimantan.",
     "bio2": "My work sits around web applications, business websites, backend systems, and the practical engineering decisions that help software stay useful after it ships.",
     "education": "Education",
+    "educationDegree": "Information Systems · Institut Teknologi Kalimantan",
     "focus": "Focus",
     "basedIn": "Based in",
     "downloadCv": "Download CV",
@@ -74,6 +178,18 @@
     "ctaEyebrow": "Work together",
     "ctaTitle": "Have a useful\nproblem?",
     "ctaLink": "Start a conversation"
+    ,"introTitle": "I'm Rifki, the person behind NasLabs."
+    ,"introLead": "NasLabs is my personal digital lab — a place to build, experiment, document, and learn through real projects."
+    ,"introBody": "My work moves between interfaces, data, systems, and the infrastructure that helps them stay useful."
+    ,"whatTitle": "What I keep returning to."
+    ,"whatDescription": "These areas overlap in practice. They are ways of looking at a problem, not a list of services."
+    ,"areas": { "web": { "label": "01", "title": "Web", "description": "Interfaces and applications that make complex work easier to see and use." }, "data": { "label": "02", "title": "Data", "description": "Models, records, and flows that make activity easier to understand." }, "systems": { "label": "03", "title": "Systems", "description": "The structure behind products, integrations, and everyday decisions." }, "infrastructure": { "label": "04", "title": "Infrastructure", "description": "Tools and environments that help software stay available and maintainable." } }
+    ,"philosophyTitle": "Build. Learn. Explore."
+    ,"philosophyDescription": "A practical loop for staying close to both the problem and the system behind it."
+    ,"philosophy": { "build": { "title": "Build", "description": "Turn an idea or problem into something concrete enough to use and question." }, "learn": { "title": "Learn", "description": "Use implementation as a way to understand the system more deeply." }, "explore": { "title": "Explore", "description": "Test unfamiliar technologies and approaches without requiring every experiment to become a product." } }
+    ,"profileLabel": "Profile"
+    ,"profileTitle": "A small practice with room to think."
+    ,"achievements": { "eyebrow": "Selected achievements", "title": "A few milestones worth remembering.", "description": "A short record of moments that shaped the practice.", "listLabel": "Selected achievements by year", "team": "Team", "role": "Role" }
   },
   "ContactPage": {
     "eyebrow": "Contact",
@@ -84,7 +200,50 @@
     "name": "Name", "namePlaceholder": "Your name", "email": "Email", "emailPlaceholder": "you@company.com",
     "help": "What do you need help with?", "select": "Select one", "projectContext": "Project context", "contextPlaceholder": "A few sentences about the project, timeline, or challenge.", "send": "Send inquiry", "sending": "Sending…",
     "types": { "website": "Business website", "app": "Custom web application", "api": "Backend or API", "existing": "Existing system", "other": "Something else" },
-    "messages": { "name": "Please add your name.", "email": "Please use a valid email address.", "type": "Please choose a project type.", "context": "Please share a little more context.", "check": "Please check the form and try again.", "notConfigured": "The contact service is not configured yet. Please email us directly.", "failed": "We could not send your inquiry. Please try again or email us directly.", "success": "Thanks — your inquiry has been sent. We will get back to you soon." }
+    "messages": { "name": "Please add your name.", "email": "Please use a valid email address.", "type": "Please choose a project type.", "context": "Please share a little more context.", "check": "Please check the form and try again.", "notConfigured": "The contact service is not configured yet. Please email us directly.", "failed": "We could not send your inquiry. Please try again or email us directly.", "success": "Thanks — your inquiry has been sent. We will get back to you soon." },
+    "titleV2": "Let's build\nsomething useful.", "introV2": "Have a project, system, data question, or idea worth exploring? Start with the context.", "contextLabel": "Start with the context", "startLabel": "Start a conversation", "roadmapLabel": "Inquiry roadmap", "roadmap": { "context": "Context", "contextText": "Tell me what you are trying to solve.", "direction": "Direction", "directionText": "Choose the kind of work involved.", "message": "Message", "messageText": "Share enough detail to start." }, "workspaceEyebrow": "Project inquiry", "workspaceIntro": "A useful first message can be simple. The context helps decide what to explore next.", "steps": { "identity": "Identity", "direction": "Direction", "context": "Context" }, "successLabel": "Inquiry received", "successTitle": "Thanks for the context.", "successBody": "Your message has been sent. I’ll reply through email.", "sendAnother": "Send another message"
+  },
+  "WorksV2": {
+    "eyebrow": "Works / Index",
+    "title": "Things I've built, shaped, and learned from.",
+    "description": "Selected products and systems documented through the problems, decisions, and details that made them real.",
+    "archive": "All works",
+    "projects": "projects",
+    "back": "Back to works",
+    "workNumber": "Work",
+    "selected": "Selected work",
+    "openProject": "View case study",
+    "repository": "Repository",
+    "previous": "Previous work",
+    "next": "Next work",
+    "chapters": { "overview": "Overview", "contribution": "Contribution", "workflows": "Workflows", "engineering": "Engineering", "outcome": "Outcome", "reflection": "Reflection" },
+    "meta": { "year": "Year", "role": "Role", "category": "Category", "stack": "Stack", "status": "Status" }
+  },
+  "ExperimentsV2": {
+    "eyebrow": "Experiments / Lab",
+    "title": "Not everything has to become a product.",
+    "description": "Smaller explorations, prototypes, systems, and ideas built to learn how things work.",
+    "archive": "Lab index",
+    "entries": "entries",
+    "empty": {
+      "label": "A space in progress",
+      "title": "The lab is still gathering its questions.",
+      "description": "Experiments will appear here as they become ready to share."
+    }
+  },
+  "NotesV2": {
+    "eyebrow": "Notes / Index",
+    "title": "Notes from the process.",
+    "description": "Writing about things built, explored, learned, and investigated along the way.",
+    "back": "Back to notes",
+    "readingTime": "{minutes} min read",
+    "readNote": "Read note",
+    "updated": "Updated {date}",
+    "empty": {
+      "label": "Notes coming together",
+      "title": "The first notes are still taking shape.",
+      "description": "Notes will appear here as they become ready to share."
+    }
   },
   "CaseStudy": {
     "back": "Back to work", "context": "Context", "role": "Role", "technology": "Technology", "access": "Access", "public": "Public project", "private": "Private project", "open": "Open project", "ctaEyebrow": "Have a similar challenge?", "ctaTitle": "Let's talk\nthrough it.", "ctaLink": "Start a conversation"

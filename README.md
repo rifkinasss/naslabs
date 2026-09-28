@@ -1,6 +1,6 @@
 # NasLabs Web
 
-Official website for NasLabs, an independent software development studio.
+Personal digital lab for Rifki Anashirul — Build. Learn. Explore.
 
 ## Stack
 
@@ -8,7 +8,8 @@ Official website for NasLabs, an independent software development studio.
 - Tailwind CSS
 - shadcn/ui + Radix UI
 - Lucide React
-- Local project content
+- Local Works and Notes MDX content
+- Structured Experiments data
 - Resend for contact email
 - Optional Google Analytics 4
 
@@ -45,25 +46,57 @@ The app remains functional without the optional analytics key. The contact form 
 
 ```text
 /
-/services
-/work
-/work/[slug]
+/works
+/works/[slug]
+/experiments
+/notes
+/notes/[slug]
 /about
 /contact
+/id (localized routes mirror the public routes above)
+/work -> /works (permanent redirect)
+/work/[slug] -> /works/[slug] (permanent redirect)
+/services -> / (permanent redirect)
 /sitemap.xml
 /robots.txt
 ```
+
+## Repository structure
+
+```text
+content/       Author-managed Works and Notes MDX
+docs/          Current architecture and authoring documentation
+messages/      English and Indonesian translations
+public/        Public assets and documents
+scripts/       Content validation and install maintenance scripts
+src/app/       Next.js routes and metadata
+src/components/ Reusable UI and page compositions
+src/config/   Stable application configuration
+src/content/  Typed structured Experiments data
+src/i18n/     Locale routing and message loading
+src/lib/      Content loaders, SEO, and application infrastructure
+src/styles/   Design tokens and scoped styles
+```
+
+Generated directories such as `.next/` and `node_modules/` are local-only
+and are intentionally excluded from this tree.
 
 ## Checks
 
 ```bash
 npm run lint
+npm run validate:content
 npx next build --webpack
 ```
 
-## CI/CD
+Theme initialization is applied by the client provider after hydration, while
+the server and first client render keep the same document tree. This avoids
+placing an inline theme script inside a hydrated provider subtree.
 
-GitHub Actions runs lint and build on every push or pull request. A successful push to `Version1.1` triggers the production deploy workflow.
+## Deployment
+
+No CI workflow files are committed in this repository. Run the checks above
+in the deployment pipeline before publishing the application.
 
 Add these GitHub repository secrets before enabling automatic deploy:
 

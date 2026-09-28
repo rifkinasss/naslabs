@@ -2,19 +2,122 @@
   "Navigation": {
     "services": "Layanan",
     "work": "Karya",
+    "works": "Karya",
+    "experiments": "Eksperimen",
+    "notes": "Catatan",
     "about": "Tentang",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "theme": "Tema",
+    "mainNavigation": "Navigasi utama",
+    "mobileNavigation": "Navigasi mobile",
+    "useLightTheme": "Gunakan tema terang",
+    "useDarkTheme": "Gunakan tema gelap",
+    "chooseTheme": "Pilih tema",
+    "menu": "Buka navigasi",
     "startProject": "Mulai project",
     "language": "Bahasa",
     "english": "English",
     "indonesian": "Bahasa Indonesia"
   },
+  "System": {
+    "notFound": {
+      "label": "404 / NOT FOUND",
+      "title": "Jalur ini tidak mengarah ke mana pun.",
+      "description": "Halaman mungkin telah dipindahkan, dihapus, atau URL-nya tidak tepat.",
+      "statusLabel": "STATUS",
+      "home": "Kembali ke beranda",
+      "works": "Lihat karya"
+    },
+    "error": {
+      "label": "SYSTEM ERROR",
+      "title": "Sesuatu tidak berjalan sesuai rencana.",
+      "description": "Terjadi kegagalan saat memuat bagian ini dari NasLabs.",
+      "statusLabel": "STATUS",
+      "retry": "Coba lagi",
+      "home": "Kembali ke beranda"
+    }
+  },
   "Footer": {
-    "description": "Studio pengembangan software independen.\nBuild. Experiment. Ship.",
+    "description": "Personal digital lab untuk membangun, belajar, dan menjelajahi teknologi.",
+    "descriptor": "Personal Digital Lab",
+    "principle": "Build. Learn. Explore.",
     "explore": "Jelajahi",
+    "navigation": "Navigasi",
+    "contact": "Kontak",
     "conversation": "Mulai percakapan",
     "tellUs": "Ceritakan project Anda",
     "backToTop": "Kembali ke atas ↑",
     "location": "Berbasis di Indonesia · bekerja secara global"
+  },
+  "HomeV2": {
+    "hero": {
+      "eyebrow": "NASLABS / PERSONAL DIGITAL LAB",
+      "title": "Membangun ide menjadi sesuatu yang nyata.",
+      "description": "Ruang personal untuk karya, eksperimen, catatan, dan proses belajar yang terus berjalan melalui teknologi.",
+      "exploreWorks": "Lihat karya",
+      "about": "Tentang saya",
+      "downloadCv": "Download CV",
+      "signatureLabel": "Area eksplorasi NasLabs"
+    },
+    "works": {
+    "eyebrow": "Karya pilihan",
+      "title": "Hal-hal yang dibangun dengan konteks.",
+    "description": "Pilihan karya yang membuat sebuah ide, sistem, atau cara kerja menjadi lebih nyata.",
+    "readMore": "Lihat detail",
+    "viewAll": "Lihat semua karya",
+    "carouselLabel": "Showcase karya pilihan",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya",
+    "position": "slide"
+    },
+    "areas": {
+    "eyebrow": "Area",
+      "title": "Tempat pekerjaan ini biasanya berlangsung.",
+      "description": "Beberapa area yang berulang, dari antarmuka yang digunakan orang hingga sistem yang membuatnya berjalan.",
+      "items": {
+        "web": { "title": "Web", "description": "Antarmuka dan aplikasi yang membuat pekerjaan kompleks lebih mudah dilihat dan digunakan." },
+        "data": { "title": "Data", "description": "Model, catatan, dan alur yang mengubah aktivitas menjadi sesuatu yang dapat dipahami." },
+        "systems": { "title": "Systems", "description": "Struktur di balik produk, operasional, integrasi, dan keputusan sehari-hari." },
+        "infrastructure": { "title": "Infrastructure", "description": "Tool dan environment yang membantu software tetap tersedia dan mudah dirawat." }
+      }
+    },
+    "experiments": {
+    "eyebrow": "Eksperimen",
+      "title": "Tidak semuanya harus menjadi produk.",
+      "description": "Sebagian hal dibangun untuk menguji ide, mempelajari sistem, atau mengikuti sebuah pertanyaan lebih jauh.",
+      "stateLabel": "Ruang yang sedang disiapkan",
+      "state": "Eksperimen akan muncul di sini ketika sudah siap untuk dibagikan.",
+      "viewAll": "Lihat semua eksperimen"
+    },
+    "notes": {
+    "eyebrow": "Catatan",
+      "title": "Menuliskan apa yang dipelajari.",
+      "description": "Catatan akan mengumpulkan pertanyaan, keputusan, dan pengamatan yang tumbuh dari proses membangun sesuatu.",
+      "stateLabel": "Catatan sedang disusun",
+      "state": "Catatan pertama sedang dibentuk menjadi tempat yang layak untuk dikunjungi kembali.",
+      "viewAll": "Lihat semua catatan",
+      "label": "Catatan",
+      "minutes": "mnt baca"
+    },
+    "about": {
+    "eyebrow": "Tentang",
+      "title": "Memahami bagaimana sesuatu bekerja, lalu mencoba membangunnya.",
+    "description": "NasLabs adalah personal digital lab milik Rifki Anashirul: ruang untuk karya, eksperimen, dan catatan tentang teknologi.",
+    "context": "Saya adalah Full-Stack Web Developer dan orang di balik NasLabs. Lab ini dekat dengan proyek nyata, keputusan engineering yang dibuat dengan pertimbangan, dan pertanyaan yang muncul saat membangun sesuatu.",
+    "facts": {
+      "role": "Full-Stack Web Developer",
+      "education": "Sistem Informasi · ITK",
+      "areas": "Web · Data · Systems · Infrastructure"
+    },
+      "cta": "Tentang saya"
+    },
+    "contact": {
+    "eyebrow": "Kontak",
+      "title": "Punya sesuatu untuk dibangun?",
+      "description": "Jika ada masalah, ide, atau sistem yang ingin dijelajahi bersama, mulai dari konteks yang sudah Anda punya.",
+      "cta": "Mulai percakapan"
+    }
   },
   "Home": {
     "studio": "Studio pengembangan software independen",
@@ -56,9 +159,10 @@
     "person": "Orang di balik NasLabs",
     "greeting": "Hai, saya Rifki.",
     "nickname": "Kebanyakan orang memanggil saya Kinas.",
-    "bio1": "Saya adalah software developer dan pendiri NasLabs. Saya lulus dari Institut Teknologi Kalimantan dengan gelar Sarjana Komputer (S.Kom.).",
+    "bio1": "Saya adalah Full-Stack Web Developer dan pendiri NasLabs. Saya lulus dari program Sistem Informasi di Institut Teknologi Kalimantan.",
     "bio2": "Pekerjaan saya berfokus pada aplikasi web, website bisnis, sistem backend, dan keputusan engineering praktis yang membuat software tetap berguna setelah dirilis.",
     "education": "Pendidikan",
+    "educationDegree": "Sistem Informasi · Institut Teknologi Kalimantan",
     "focus": "Fokus",
     "basedIn": "Berbasis di",
     "downloadCv": "Download CV",
@@ -74,6 +178,18 @@
     "ctaEyebrow": "Bekerja bersama",
     "ctaTitle": "Punya masalah\nyang berguna untuk diselesaikan?",
     "ctaLink": "Mulai percakapan"
+    ,"introTitle": "Saya Rifki, orang di balik NasLabs."
+    ,"introLead": "NasLabs adalah personal digital lab saya — ruang untuk membangun, bereksperimen, mendokumentasikan, dan belajar melalui proyek nyata."
+    ,"introBody": "Pekerjaan saya bergerak di antara antarmuka, data, sistem, dan infrastruktur yang membantu semuanya tetap berguna."
+    ,"whatTitle": "Hal-hal yang terus saya datangi."
+    ,"whatDescription": "Area-area ini saling beririsan dalam praktik. Ini adalah cara melihat masalah, bukan daftar layanan."
+    ,"areas": { "web": { "label": "01", "title": "Web", "description": "Antarmuka dan aplikasi yang membuat pekerjaan kompleks lebih mudah dilihat dan digunakan." }, "data": { "label": "02", "title": "Data", "description": "Model, catatan, dan alur yang membuat aktivitas lebih mudah dipahami." }, "systems": { "label": "03", "title": "Systems", "description": "Struktur di balik produk, integrasi, dan keputusan sehari-hari." }, "infrastructure": { "label": "04", "title": "Infrastructure", "description": "Tool dan environment yang membantu software tetap tersedia dan mudah dirawat." } }
+    ,"philosophyTitle": "Build. Learn. Explore."
+    ,"philosophyDescription": "Siklus praktis untuk tetap dekat dengan masalah dan sistem yang ada di baliknya."
+    ,"philosophy": { "build": { "title": "Build", "description": "Mengubah ide atau masalah menjadi sesuatu yang cukup nyata untuk digunakan dan dipertanyakan." }, "learn": { "title": "Learn", "description": "Menggunakan implementasi sebagai cara untuk memahami sistem dengan lebih dalam." }, "explore": { "title": "Explore", "description": "Menguji teknologi dan pendekatan yang belum familiar tanpa mengharuskan setiap eksperimen menjadi produk." } }
+    ,"profileLabel": "Profil"
+    ,"profileTitle": "Praktik kecil dengan ruang untuk berpikir."
+    ,"achievements": { "eyebrow": "Pencapaian pilihan", "title": "Beberapa langkah yang layak diingat.", "description": "Catatan singkat tentang momen yang ikut membentuk proses ini.", "listLabel": "Pencapaian pilihan berdasarkan tahun", "team": "Tim", "role": "Peran" }
   },
   "ContactPage": {
     "eyebrow": "Kontak",
@@ -84,9 +200,52 @@
     "name": "Nama", "namePlaceholder": "Nama Anda", "email": "Email", "emailPlaceholder": "anda@perusahaan.com",
     "help": "Apa yang ingin dibantu?", "select": "Pilih salah satu", "projectContext": "Konteks project", "contextPlaceholder": "Beberapa kalimat tentang project, timeline, atau tantangannya.", "send": "Kirim inquiry", "sending": "Mengirim…",
     "types": { "website": "Website bisnis", "app": "Aplikasi web custom", "api": "Backend atau API", "existing": "Sistem existing", "other": "Lainnya" },
-    "messages": { "name": "Silakan isi nama Anda.", "email": "Silakan gunakan alamat email yang valid.", "type": "Silakan pilih jenis project.", "context": "Silakan tambahkan sedikit konteks.", "check": "Silakan periksa form dan coba lagi.", "notConfigured": "Layanan kontak belum dikonfigurasi. Silakan kirim email langsung kepada kami.", "failed": "Inquiry tidak dapat dikirim. Silakan coba lagi atau kirim email langsung kepada kami.", "success": "Terima kasih — inquiry Anda sudah terkirim. Kami akan segera menghubungi Anda." }
+    "messages": { "name": "Silakan isi nama Anda.", "email": "Silakan gunakan alamat email yang valid.", "type": "Silakan pilih jenis project.", "context": "Silakan tambahkan sedikit konteks.", "check": "Silakan periksa form dan coba lagi.", "notConfigured": "Layanan kontak belum dikonfigurasi. Silakan kirim email langsung kepada kami.", "failed": "Inquiry tidak dapat dikirim. Silakan coba lagi atau kirim email langsung kepada kami.", "success": "Terima kasih — inquiry Anda sudah terkirim. Kami akan segera menghubungi Anda." },
+    "titleV2": "Mari membangun\nsesuatu yang berguna.", "introV2": "Punya project, sistem, data, atau ide yang ingin dieksplorasi? Mari mulai dari konteksnya.", "contextLabel": "Mulai dari konteksnya", "startLabel": "Mulai percakapan", "roadmapLabel": "Alur inquiry", "roadmap": { "context": "Konteks", "contextText": "Ceritakan apa yang ingin diselesaikan.", "direction": "Arah", "directionText": "Pilih jenis pekerjaan yang terlibat.", "message": "Pesan", "messageText": "Bagikan detail yang cukup untuk memulai." }, "workspaceEyebrow": "Inquiry project", "workspaceIntro": "Pesan awal yang berguna tidak perlu panjang. Konteks membantu menentukan apa yang perlu dieksplorasi selanjutnya.", "steps": { "identity": "Identitas", "direction": "Arah", "context": "Konteks" }, "successLabel": "Inquiry diterima", "successTitle": "Terima kasih atas konteksnya.", "successBody": "Pesan Anda sudah terkirim. Saya akan membalas melalui email.", "sendAnother": "Kirim pesan lain"
+  },
+  "WorksV2": {
+    "eyebrow": "Karya / Indeks",
+    "title": "Hal-hal yang saya bangun, bentuk, dan pelajari.",
+    "description": "Produk dan sistem terpilih yang didokumentasikan melalui masalah, keputusan, dan detail yang membuatnya menjadi nyata.",
+    "archive": "Semua karya",
+    "projects": "project",
+    "back": "Kembali ke karya",
+    "workNumber": "Karya",
+    "selected": "Karya pilihan",
+    "openProject": "Lihat detail",
+    "repository": "Repository",
+    "previous": "Karya sebelumnya",
+    "next": "Karya berikutnya",
+    "chapters": { "overview": "Ikhtisar", "contribution": "Kontribusi", "workflows": "Alur kerja", "engineering": "Engineering", "outcome": "Hasil", "reflection": "Refleksi" },
+    "meta": { "year": "Tahun", "role": "Peran", "category": "Kategori", "stack": "Stack", "status": "Status" }
+  },
+  "ExperimentsV2": {
+    "eyebrow": "Eksperimen / Lab",
+    "title": "Tidak semuanya harus menjadi produk.",
+    "description": "Eksplorasi kecil, prototipe, sistem, dan ide yang dibangun untuk memahami cara kerja sesuatu.",
+    "archive": "Indeks lab",
+    "entries": "entri",
+    "empty": {
+      "label": "Ruang yang sedang disiapkan",
+      "title": "Lab ini masih mengumpulkan pertanyaan.",
+      "description": "Eksperimen akan muncul di sini ketika sudah siap untuk dibagikan."
+    }
+  },
+  "NotesV2": {
+    "eyebrow": "Catatan / Indeks",
+    "title": "Catatan dari prosesnya.",
+    "description": "Tulisan tentang hal-hal yang dibangun, dijelajahi, dipelajari, dan diselidiki sepanjang prosesnya.",
+    "back": "Kembali ke catatan",
+    "readingTime": "{minutes} mnt baca",
+    "readNote": "Baca catatan",
+    "updated": "Diperbarui {date}",
+    "empty": {
+      "label": "Catatan sedang disusun",
+      "title": "Catatan pertama masih mengambil bentuk.",
+      "description": "Catatan akan muncul di sini ketika sudah siap untuk dibagikan."
+    }
   },
   "CaseStudy": {
-    "back": "Kembali ke karya", "context": "Konteks", "role": "Peran", "technology": "Teknologi", "access": "Akses", "public": "Project publik", "private": "Project privat", "open": "Buka project", "ctaEyebrow": "Punya tantangan serupa?", "ctaTitle": "Mari bicarakan\nsolusinya.", "ctaLink": "Mulai percakapan"
+    "back": "Kembali ke karya", "context": "Konteks", "role": "Peran", "technology": "Teknologi", "access": "Akses", "public": "Karya publik", "private": "Karya privat", "open": "Buka karya", "ctaEyebrow": "Punya tantangan serupa?", "ctaTitle": "Mari bicarakan\nsolusinya.", "ctaLink": "Mulai percakapan"
   }
 }

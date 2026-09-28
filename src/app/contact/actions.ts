@@ -5,10 +5,10 @@ import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(2, "messages.name"),
-  email: z.string().trim().email("messages.email"),
-  projectType: z.string().min(1, "messages.type"),
-  description: z.string().trim().min(20, "messages.context"),
+  name: z.string().trim().min(2, "messages.name").max(120, "messages.name"),
+  email: z.string().trim().email("messages.email").max(254, "messages.email"),
+  projectType: z.string().trim().min(1, "messages.type").max(80, "messages.type"),
+  description: z.string().trim().min(20, "messages.context").max(5000, "messages.context"),
 });
 
 export type ContactFormState = { status: "idle" | "error" | "success"; message: string };
@@ -18,6 +18,9 @@ function escapeHtml(value: string) {
 }
 
 export async function submitContactForm(_previousState: ContactFormState, formData: FormData): Promise<ContactFormState> {
+  const honeypot = formData.get("website");
+  if (typeof honeypot === "string" && honeypot.trim()) return { status: "success", message: "messages.success" };
+
   const result = contactSchema.safeParse(Object.fromEntries(formData));
 
   if (!result.success) {

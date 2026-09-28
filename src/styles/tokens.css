@@ -1,0 +1,77 @@
+:root {
+  --v2-background: #f8fafc;
+  --v2-foreground: #0f172a;
+  --v2-surface: #ffffff;
+  --v2-surface-subtle: #f1f5f9;
+  --v2-muted: #64748b;
+  --v2-muted-foreground: #475569;
+  --v2-border: #e2e8f0;
+  --v2-border-strong: #cbd5e1;
+  --v2-primary: #2563eb;
+  --v2-primary-hover: #1d4ed8;
+  --v2-primary-soft: #eff6ff;
+  --v2-primary-foreground: #ffffff;
+  --v2-inverse: #0f172a;
+  --v2-inverse-foreground: #f8fafc;
+  --v2-focus-ring: #1d4ed8;
+  --v2-success: #15803d;
+  --v2-warning: #b45309;
+  --v2-danger: #b91c1c;
+
+  --v2-font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --v2-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --v2-space-1: 0.25rem;
+  --v2-space-2: 0.5rem;
+  --v2-space-3: 0.75rem;
+  --v2-space-4: 1rem;
+  --v2-space-5: 1.5rem;
+  --v2-space-6: 2rem;
+  --v2-space-7: 3rem;
+  --v2-space-8: 4rem;
+  --v2-space-9: 6rem;
+  --v2-page-gutter: 1rem;
+  --v2-section-space: clamp(4rem, 7vw, 7.5rem);
+  --v2-content-gap: clamp(1.5rem, 3vw, 3rem);
+  --v2-component-gap: 1rem;
+  --v2-compact-gap: 0.5rem;
+
+  --v2-container-max: 76rem;
+  --v2-radius-sm: 0.2rem;
+  --v2-radius-md: 0.4rem;
+  --v2-shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+}
+
+html.dark {
+  --v2-background: #0b1220;
+  --v2-foreground: #e2e8f0;
+  --v2-surface: #111c2e;
+  --v2-surface-subtle: #172338;
+  --v2-muted: #94a3b8;
+  --v2-muted-foreground: #cbd5e1;
+  --v2-border: #26364d;
+  --v2-border-strong: #3b4f6b;
+  --v2-primary: #60a5fa;
+  --v2-primary-hover: #93c5fd;
+  --v2-primary-soft: #172d4d;
+  --v2-primary-foreground: #07111f;
+  --v2-inverse: #e2e8f0;
+  --v2-inverse-foreground: #0b1220;
+  --v2-focus-ring: #93c5fd;
+  --v2-success: #4ade80;
+  --v2-warning: #fbbf24;
+  --v2-danger: #f87171;
+  --v2-shadow-sm: 0 1px 2px rgb(2 6 23 / 0.28);
+}
+
+@media (min-width: 48rem) {
+  :root { --v2-page-gutter: 2rem; }
+}
+
+@media (min-width: 64rem) {
+  :root { --v2-page-gutter: 3rem; }
+}
+
+@media (min-width: 90rem) {
+  :root { --v2-page-gutter: 4rem; }
+}

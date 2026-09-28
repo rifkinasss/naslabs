@@ -1,0 +1,53 @@
+---
+slug: pondflow
+locale: en
+title: PondFlow
+description: A practical platform for fish farmers to track pond cycles, costs, and harvest performance.
+category: Web app · Aquaculture operations
+featured: true
+cover: /projects/pondflow-hero.png
+stack:
+  - Next.js
+  - TypeScript
+  - SQLite
+  - Google Gemini
+  - Capacitor
+  - REST API
+role: Product design, full-stack development, data modeling, and mobile application implementation.
+status: completed
+externalUrl: https://pondflow.naslabs.my.id
+---
+
+## Context
+
+PondFlow is a personal product experiment for fish-farming operations. I took it from requirements and a PRD through user flows and implementation, using the project to explore how a practical operational product could be structured before adding more surface area.
+
+## The challenge
+
+Important operational details were fragmented across notes, spreadsheets, and memory. The product needed a model that could hold pond activity, culture cycles, costs, harvest, and performance together without making daily recording feel like administrative overhead.
+
+<Flow label="Operational model">Aquaculture operation → Pond / culture → Operational cycle → Records / costs → Harvest / performance → Operational overview</Flow>
+
+## Product structure
+
+PondFlow brings pond management, financial records, production cycles, and harvest performance into one workspace. The model is intentionally described as a product workflow here, not as a claim about a finalized database schema.
+
+## Dashboard experience
+
+The dashboard supports views of pond metrics, financial information, cycle performance, and operational overview. The existing hero asset shows the intended product direction: a single surface where operational and financial signals can be read together.
+
+## Field and mobile direction
+
+The web application is responsive and was shaped toward PWA and Android use. Capacitor supported the mobile application direction. The repository does not provide adoption data, so this case study does not claim field usage or retention.
+
+## Technical direction
+
+The current stack includes Next.js, TypeScript, SQLite, Google Gemini, Capacitor, and REST API. Google Gemini is recorded as part of the stack context; no specific Gemini-powered feature is claimed here without supporting implementation evidence.
+
+## Outcome
+
+PondFlow progressed from a personal product idea into a working web and mobile-oriented product basis for testing and iteration. The supported outcome is the product foundation itself, not a claim about business adoption or production scale.
+
+## Reflection
+
+The experiment gave me a repeatable path from define, to build, to use and test, to observe, and then refine. It also made the value of a clear domain model apparent before investing in more complex screens.

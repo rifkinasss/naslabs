@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, MapPin } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { AboutPage } from "@/components/about/about-page";
 import { localizedMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">): Promise<Metadata> { const { locale } = await params; return localizedMetadata(locale as "en" | "id", "/about", locale === "id" ? "Tentang" : "About", locale === "id" ? "Tentang NasLabs dan pendirinya, Rifki Anashirul." : "About NasLabs and its founder, Rifki Anashirul."); }
 
-export default function AboutPage() {
-  const t = useTranslations("AboutPage");
-  return <main className="inner-page section-shell"><div className="inner-hero"><p className="eyebrow"><span className="eyebrow-dot" /> {t("eyebrow")}</p><h1>{t("title").split("\n").map((line, index) => <span key={line}>{index > 0 && <br />}{index === 1 ? <em>{line}</em> : line}</span>)}</h1><p>{t("intro")}</p></div><section className="founder-profile"><div className="profile-visual" aria-label="Profile visual for Rifki Anashirul"><span>RA</span><small>RIFKI<br />ANASHIRUL</small><i /></div><div className="founder-bio"><p className="eyebrow">{t("person")}</p><h2>{t("greeting")}<br /><em>{t("nickname")}</em></h2><p>{t("bio1")}</p><p>{t("bio2")}</p><div className="profile-facts"><span><strong>{t("education")}</strong>Institut Teknologi Kalimantan<br />Sarjana Komputer (S.Kom.)</span><span><strong>{t("focus")}</strong>Web engineering<br />Digital products</span><span><strong>{t("basedIn")}</strong><MapPin aria-hidden="true" />Indonesia</span></div><a className="text-link" href="/CV/CV_System%20Engineer.pdf" download="Rifki-Anashirul-CV-System-Engineer.pdf">{t("downloadCv")} <ArrowUpRight aria-hidden="true" /></a></div></section><section className="personal-note"><p className="eyebrow">{t("personalNote")}</p><blockquote>&quot;{t("quote")}&quot;</blockquote><p className="signature">— Rifki Anashirul / Kinas</p></section><section className="principles"><p className="eyebrow">{t("principles")}</p><div className="principle-grid"><div><strong>01</strong><h2>{t("principle1")}</h2><p>{t("principle1Text")}</p></div><div><strong>02</strong><h2>{t("principle2")}</h2><p>{t("principle2Text")}</p></div><div><strong>03</strong><h2>{t("principle3")}</h2><p>{t("principle3Text")}</p></div></div></section><section className="page-cta"><div><p className="eyebrow">{t("ctaEyebrow")}</p><h2>{t("ctaTitle").split("\n").map((line, index) => <span key={line}>{index > 0 && <br />}{index === 1 ? <em>{line}</em> : line}</span>)}</h2></div><Link className="text-link" href="/contact">{t("ctaLink")} <ArrowUpRight aria-hidden="true" /></Link></section></main>;
+export default function LocalizedAboutPage() {
+  return <AboutPage />;
 }
